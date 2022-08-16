@@ -1,0 +1,1 @@
+{"errorType":"ReferenceError","errorMessage":"Exception is not defined","trace":["ReferenceError: Exception is not defined","    at Runtime.exports.handler (/var/task/index.js:2:5)","    at Runtime.handleOnceNonStreaming (/var/runtime/Runtime.js:73:25)"]}

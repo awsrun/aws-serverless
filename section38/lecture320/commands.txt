@@ -1,0 +1,27 @@
+Hands-on Labs : Develop Lambda Functiın for DynamoDB Streams Event Source Mapping
+---
+Create item in Order table
+
+id - 1
+name - iphone order
+status - IN_PROGRESS
+date - 12.12.2022
+
+---
+CloudWatch Logs
+
+---
+Update order item
+
+change order status
+SHIPMENT
+
+>
+Test with changing order item status;
+
+SHIPMENT > COMPLETED
+---
+
+ASSIGNMENT:
+https://aws.amazon.com/blogs/database/how-to-perform-ordered-data-replication-between-applications-by-using-amazon-dynamodb-streams/
+Amazon SNS fan-out pattern to Amazon SQS

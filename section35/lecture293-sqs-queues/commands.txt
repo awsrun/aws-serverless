@@ -1,0 +1,32 @@
+Create, List and Delete Queue on Amazon SQS using AWS SDK
+---
+SQS Client - AWS SDK for JavaScript v3
+https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-sqs/index.html
+
+Commands :
+	ListQueuesCommand
+	CreateQueueCommand
+	GetQueueUrlCommand
+	DeleteQueueCommand
+---
+npm init -y
+npm install @aws-sdk/client-sqs
+---
+Create Client Object:
+
+sqsClient.js
+import { SQSClient } from "@aws-sdk/client-sqs";
+const REGION = "us-east-2";
+const snsClient = new SQSClient({ region: REGION });
+export { sqsClient };
+
+---
+QueueUrl: 'https://sqs.us-east-2.amazonaws.com/308360398142/new-queue'
+
+---
+Send Messages to Queue on Amazon SQS using AWS SDK
+	SendMessageCommand
+	ReceiveMessageCommand
+	DeleteMessageCommand
+
+---

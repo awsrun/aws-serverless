@@ -1,0 +1,49 @@
+Develop Basket Microservices Lambda Function Code
+---
+create package.json
+npm init -y
+---
+set type module
+  "main": "index.js",
+  "type": "module",
+---
+Install required packages:
+client-eventbridge
+
+PUBLISH EVENT
+https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-eventbridge/index.html
+
+Run Command:
+npm install @aws-sdk/client-eventbridge
+---
+write pseo code:
+  // 1- accommodate incoming http request to correct path
+  // 2- get request body payload which includes event data
+  // 3- publish message to Amazon EventBridge Custom Eventbus with using eventbridge sdk package	
+  // 4- return back snyc basket payload to the api gateway
+
+---
+Expected payload 1 :
+{
+  "item":"iphone",
+  "price":150,
+  "detailtype":"CheckoutBasket",
+  "source": "com.swn.basket.checkoutbasket"
+}
+Expected payload 2 :
+{
+  "notify":"price update",
+  "price":200,
+  "detailtype":"CheckoutBasket",
+  "source": "com.swn.basket.checkoutbasket"
+}
+---
+Event Pattern Rules:
+{
+  "detail-type": ["CheckoutBasket"],
+  "source": ["com.swn.basket.checkoutbasket"]
+}
+{
+  "detail-type": ["Notification"],
+  "source": ["com.swn.basket.notification"]
+}

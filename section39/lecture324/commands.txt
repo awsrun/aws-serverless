@@ -1,0 +1,24 @@
+Hands-on Labs : Process Kinesis Streams using AWS Lambda
+---
+1- Create Kinesis Data Streams
+2- Create Lambda Function
+3- Add required Permissions to polling Kinesis shards from Lambda
+4- Create event source mapping polling invocation type between Lambda and Kinesis
+5- Develop our Lambda function code with incoming kinesis records
+6- E2E test
+
+>
+templates:
+kinesis data streams
+
+>
+3- Add required Permissions to polling Kinesis shards from Lambda
+AWS Policy:
+AWSLambdaKinesisExecutionRole
+    kinesis:DescribeStream
+    kinesis:DescribeStreamSummary
+    kinesis:GetRecords
+    kinesis:GetShardIterator
+    kinesis:ListShards
+    kinesis:ListStreams
+    kinesis:SubscribeToShard

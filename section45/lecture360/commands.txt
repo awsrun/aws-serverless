@@ -1,0 +1,48 @@
+Create Step Functions State Machine Using AWS Lambda
+---
+State Machine: Step Functions Workflow:
+Start
+  Choise-OrderType
+    If "OrderType":"PURCHASE"
+        PurchaseFunction
+    Else If "OrderType":"REFUND"
+        RefundFunction
+End
+---
+Expected Payloads:
+Payload 1:
+{
+	"OrderType":"PURCHASE"
+}
+
+Payload 2:
+{
+	"OrderType":"REFUND"
+}
+---
+PurchaseFunction Code:
+
+exports.handler = async (event) => {
+    console.log("event:", JSON.stringify(event, undefined, 2));
+    console.log(event.OrderType);		
+
+    const response = {
+        statusCode: 200,
+        body: `Hello from PurchaseFunction. OrderType: "${event.OrderType}"`
+    };
+    return response;
+};
+---
+RefundFunction Code:
+
+exports.handler = async (event) => {
+    console.log("event:", JSON.stringify(event, undefined, 2));
+    console.log(event.OrderType);		
+
+    const response = {
+        statusCode: 200,
+        body: `Hello from RefundFunction. OrderType: "${event.OrderType}"`
+    };
+    return response;
+};
+---

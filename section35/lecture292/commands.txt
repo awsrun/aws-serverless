@@ -1,0 +1,4 @@
+Introduction - Amazon SQS - Developing with AWS SDK
+---
+SQS Client - AWS SDK for JavaScript v3
+https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-sqs/index.html

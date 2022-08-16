@@ -1,0 +1,22 @@
+Invoke Lambda functions with event.json using AWS CLI
+
+Invoke Command:
+aws lambda invoke --function-name my-function --cli-binary-format raw-in-base64-out --payload file://event.json response.json
+
+Multiline char 
+	    for windows = `
+	    for mac = \
+
+windows:
+aws lambda invoke `
+	--function-name my-function `
+	--cli-binary-format raw-in-base64-out `
+	--payload file://event.json `
+	response.json
+
+Example retrieve a log ID
+aws lambda invoke --function-name my-function out --log-type Tail
+
+macos:
+aws lambda invoke --function-name my-function out --log-type Tail \
+--query 'LogResult' --output text |  base64 -d

@@ -1,0 +1,20 @@
+{
+    "Records": [
+        {
+            "messageId": "54a08185-bc23-4de4-9807-5d5c6406a7dd",
+            "receiptHandle": "AQEBj2NbdrVrKoO4hm8odN0QMvaCRICy/bT4AXckDP/iPouK++9ZHygDsXLpmugWGTYjg0gWSUHWNx2CYdrmFZlakgd5ZRwQjU6orfTj3q1CJ1Bl58ejdfbTqMMM3tY4iqiLe2sMTf7euiUk0RgI/TLpQGP/+IauxhkfPSffIcNKK78ROLg6BE0gJ710qsfccnZbbWkeTxLaZ+brrIwqzCy3QJ4VwciFUd8xwCwPDPFZ91XdsURms0H02LsFQN8MynLTMe3A7ut3yW0et7dc+JL8C1q3bxw1p3rw9rzPIiCeF4l7jYRuiOG+nXCLO+JT0rZ0hT9ffnmix6rUvdSU3nKuBI7vItmgi9lwc9Q+oUWMlcNaujIO4eYm22OxkfRWzb5dlOwC80C9YKmRHdu5yhh9Aw==",
+            "body": "{\"version\":\"0\",\"id\":\"d13d785c-2966-0d3a-0511-49aa5ef8f78b\",\"detail-type\":\"CheckoutBasket\",\"source\":\"com.swn.basket.checkoutbasket\",\"account\":\"308360398142\",\"time\":\"2022-08-12T13:10:43Z\",\"region\":\"us-east-2\",\"resources\":[],\"detail\":{\"item\":\"iphone\",\"price\":\"100\"}}",
+            "attributes": {
+                "ApproximateReceiveCount": "1",
+                "SentTimestamp": "1660309843781",
+                "SenderId": "AIDAIMTEBMVXFWRSXIKCK",
+                "ApproximateFirstReceiveTimestamp": "1660309843785"
+            },
+            "messageAttributes": {},
+            "md5OfBody": "f48f05d7b962de8ed3912cf036319597",
+            "eventSource": "aws:sqs",
+            "eventSourceARN": "arn:aws:sqs:us-east-2:308360398142:order-queue",
+            "awsRegion": "us-east-2"
+        }
+    ]
+}

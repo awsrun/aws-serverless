@@ -1,0 +1,23 @@
+E2E Test REST API and Lambda Function with Incoming REST API Event Json Object
+---
+
+GET
+https://cg9cloipv8.execute-api.us-east-2.amazonaws.com/product
+{"message":"Successfully finished operation: \"GET /product\"","body":"Processing Get All Products"}
+
+GET by ID
+https://cg9cloipv8.execute-api.us-east-2.amazonaws.com/product/343
+{"message":"Successfully finished operation: \"GET /product/{id}\"","body":"Processing Get Product Id with \"343\""}
+
+POST
+https://cg9cloipv8.execute-api.us-east-2.amazonaws.com/product
+payload:
+{
+    "name":"IPhone",
+    "price":"900"
+}
+{"message":"Successfully finished operation: \"POST /product\"","body":"Processing Post Product Id with \"[object Object]\""}
+
+DELETE
+https://cg9cloipv8.execute-api.us-east-2.amazonaws.com/product/343
+{"message":"Successfully finished operation: \"DELETE /product/{id}\"","body":"Processing Delete Product Id with \"343\""}

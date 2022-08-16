@@ -1,0 +1,35 @@
+Describing and Deleting DynamoDB Tables using AWS SDK
+
+1- Install required packages
+2- Create ddbClient.js for DynamoDB Client Object
+3- Develop actual code on seperate js file
+4- Run node command
+
+---
+1- Install required Dependencies into node_modules
+
+Run Command:
+npm install @aws-sdk/client-dynamodb
+
+1.1- update package.json file 
+"type": "module",
+
+---
+2- Create ddbClient.js for DynamoDB Client Object
+
+ddbClient.js
+import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
+const REGION = "us-east-2";
+const ddbClient = new DynamoDBClient({ region: REGION });
+export { ddbClient };
+
+---
+3- Develop actual code on seperate js file
+
+describetable.js
+
+---
+4- Run node command
+
+Run Command:
+node describetable.js

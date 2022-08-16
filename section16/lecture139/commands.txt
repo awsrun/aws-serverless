@@ -1,0 +1,55 @@
+PartiQL CRUD Operations into DynamoDB Table with AWS CLI
+---
+Run Command:
+
+>> Create an item
+Create an item in the Order table using the INSERT PartiQL statement.
+mac:
+aws dynamodb execute-statement --statement "INSERT INTO \"Order\" \ 
+    VALUE {'id':'2','status':'IN_PROGRESS'}"
+
+windows:
+aws dynamodb execute-statement --statement "INSERT INTO \""Order\"" `
+    VALUE {'id':'2','status':'IN_PROGRESS'}"
+
+---
+>> Retrieve an item 
+Retrieve an item from the Order table using the SELECT PartiQL statement.
+mac:
+aws dynamodb execute-statement --statement "SELECT * FROM \"Order\"   \
+    WHERE id='2' AND status='IN_PROGRESS'"
+windows:
+aws dynamodb execute-statement --statement "SELECT * FROM \""Order\""   `
+    WHERE id='2' AND status='IN_PROGRESS'"
+    
+---
+>> Update an item
+Update an item in the Order table using the UPDATE PartiQL statement.
+mac:
+aws dynamodb execute-statement --statement "UPDATE \"Order\"  \
+    SET description='updated order'  \
+    WHERE id='2' AND status='IN_PROGRESS'"
+windows:
+aws dynamodb execute-statement --statement "UPDATE \""Order\""  `
+    SET description='updated order'  `
+    WHERE id='2' AND status='IN_PROGRESS'"
+
+---
+>> Delete an item
+Delete an item from the Order table using the DELETE PartiQL statement.
+mac:
+aws dynamodb execute-statement --statement "DELETE  FROM \"Order\"  \
+    WHERE id='2' AND status='IN_PROGRESS'"
+windows:
+aws dynamodb execute-statement --statement "DELETE  FROM \""Order\""  `
+    WHERE id='2' AND status='IN_PROGRESS'"
+
+---
+Delete Table:
+
+aws dynamodb delete-table --table-name Order
+
+---
+Multiline char 
+	    for windows = `
+	    for mac = \

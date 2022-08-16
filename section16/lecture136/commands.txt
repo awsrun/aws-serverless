@@ -1,0 +1,17 @@
+Read Data into DynamoDB Table with AWS CLI
+---
+Run Command:
+mac:
+aws dynamodb get-item --consistent-read \
+    --table-name Order \
+    --key '{ "id": {"S": "1"}, "status": {"S": "DELIVERY"}}'
+
+windows:
+aws dynamodb get-item --consistent-read `
+    --table-name Order `
+    --key '{ ""id"": {""S"": ""1""}, ""status"": {""S"": ""DELIVERY""}}'
+
+---
+Multiline char 
+	    for windows = `
+	    for mac = \

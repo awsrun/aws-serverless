@@ -1,0 +1,19 @@
+Query Data into DynamoDB Table with AWS CLI
+---
+Run Command:
+mac:
+aws dynamodb query \
+    --table-name Order \
+    --key-condition-expression "id = :id" \
+    --expression-attribute-values  '{ ":id":{"S":"1"}}'
+
+windows:
+aws dynamodb query `
+    --table-name Order `
+    --key-condition-expression "id = :id" `
+    --expression-attribute-values  '{ "":id"":{""S"":""1""}}'
+
+---
+Multiline char 
+	    for windows = `
+	    for mac = \

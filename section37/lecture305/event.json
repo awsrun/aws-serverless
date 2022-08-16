@@ -1,0 +1,20 @@
+{
+    "Records": [
+        {
+            "messageId": "c86d5b3c-4f34-44b4-8e0f-7a73e8a92c70",
+            "receiptHandle": "AQEBHcAZR7DPXXdfyGWjRLNloWAAUgcXhr27LAcFlH7rTvisoWXtFc16WIlvM1A7exX7icsl4lx0UwJATS5usZcCEyriLJAXr9C+ZQ+HIH49By86CCrSKCbktTV1Hvp43i7ef9iRUnAG7K4EzaCM9E6vkJ7LvO795xl9uFStWu9cmojYmOyJdA9Jng9PqRiPdLMm2bjd0+fTJQ+zIpGbh7h4NIYOb0f5lPbQiPzxOojkKtiN4MmY/hazcMir7soZP2OnPLQ5pNyXNCz4TM2gDSOKyAzZeyzWYc+Tis1M3PeKY1GYRvCqTTvqTxC1x2e0yyveOztvIhRaoHwKT+hlgyN6f96hdPtv0ZSOn/rHChBePmM95Z68dWngfEY6HkzldSBQlDpYx6ooVkrAjsCYtmMfUQ==",
+            "body": "{\n  \"Type\" : \"Notification\",\n  \"MessageId\" : \"5f0c4783-3de2-5891-bfb0-1cee479f8efe\",\n  \"TopicArn\" : \"arn:aws:sns:us-east-2:308360398142:OrderTopic\",\n  \"Subject\" : \"order_placed\",\n  \"Message\" : \"{\\n  \\\"item\\\":\\\"iphone\\\",\\n   \\\"status\\\":\\\"CREATED\\\",\\n   \\\"type\\\":\\\"SHIP_REQUIRED\\\"\\n}\",\n  \"Timestamp\" : \"2022-08-10T09:19:57.932Z\",\n  \"SignatureVersion\" : \"1\",\n  \"Signature\" : \"ySPH3M3xr0ESvM0x/dhDEYDZJMtDDZFtYVq0ITfvkO/efhr9LnCWOJQDQyUkMI6q+OtPMnqve/fgnsSAkD9blkru8h/nVPqHkjJOvzgpbKu9A9jxhvWrOGdnsUMbGo1BttZf8Xa9wUwj2yxHIpEc2V7O97rt2uHFBNsVLkWplyJ50dhD+Yiw5dusm6hMUi9FOPOKDh5PwaNFcm8mhOKuGIFpf6l89RUrjEgPOU2JUPYKmPLuUPeyVN/bMLuKzyyRasgG/KKUj6dcpXu4vDkoH5vpJAToA2dS+CuclPjPlTvhqPNp1rmFopr6r4/Wb5w8AoK+pClre+5UZ1dWqTgUrA==\",\n  \"SigningCertURL\" : \"https://sns.us-east-2.amazonaws.com/SimpleNotificationService-56e67fcb41f6fec09b0196692625d385.pem\",\n  \"UnsubscribeURL\" : \"https://sns.us-east-2.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=arn:aws:sns:us-east-2:308360398142:OrderTopic:316e6815-1442-4067-8b83-43621f612f7b\"\n}",
+            "attributes": {
+                "ApproximateReceiveCount": "1",
+                "SentTimestamp": "1660123197962",
+                "SenderId": "AIDAJQR6QDGQ7PATMSYEY",
+                "ApproximateFirstReceiveTimestamp": "1660123197966"
+            },
+            "messageAttributes": {},
+            "md5OfBody": "b7e788535d8b90dcc66b47ad63cf0448",
+            "eventSource": "aws:sqs",
+            "eventSourceARN": "arn:aws:sqs:us-east-2:308360398142:notification-queue",
+            "awsRegion": "us-east-2"
+        }
+    ]
+}

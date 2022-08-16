@@ -1,0 +1,107 @@
+Hands-on Lab: Single Calculator Microservice Expose https methods with Lambda Function Url
+---
+
+0- design lambda event
+1- Develop Lambda Function Code
+2- zip function code
+3- create lambda function with cli
+4- create function url config with cli
+5- invoke lambda function with postman
+
+---
+0- design lambda event
+Create event.json file into lecture folder
+
+event.json
+{
+    "a": 2,
+    "b": 5,
+    "op": "+"
+}
+
+POST Request:
+https://6b5fmogruzkt7no6wclnmey6jm0rlwbq.lambda-url.us-east-2.on.aws/
+Response:
+Check logs
+
+---
+1- Develop Lambda Function Code
+
+goto index.js
+exports.handler = async function() {    
+  }
+
+---
+2- zip function code
+
+Run Command:
+mac
+	zip function.zip index.js
+windows
+	Compress-Archive index.js function.zip
+manuel
+	go to index.js
+        Right click index.js
+		    Send to -> Compressed (zip) folder
+---
+3- create lambda function with cli
+
+Get Role:
+aws iam get-role --role-name lambda-ex
+
+Get role arn:
+"Arn": "arn:aws:iam::308360398142:role/lambda-ex"
+
+Run Command:
+aws lambda create-function `
+    --function-name calculator `
+    --runtime nodejs14.x `
+    --zip-file fileb://function.zip `
+    --handler index.handler `
+    --role arn:aws:iam::308360398142:role/lambda-ex
+
+---
+4- Create Function url config with cli			
+
+Run Command:
+aws lambda create-function-url-config `
+    --function-name calculator `
+    --auth-type NONE
+
+Response:
+{
+    "FunctionUrl": "https://sj4mycau3chm3lgw6qetc5youa0qdkfo.lambda-url.us-east-2.on.aws/",
+    "FunctionArn": "arn:aws:lambda:us-east-2:308360398142:function:calculator",
+    "AuthType": "NONE",
+    "CreationTime": "2022-05-23T12:56:21.663701Z"
+}
+
+---
+4- invoke lambda function with postman
+
+POSTMAN
+Header content -  -H 'content-type: application/json' \
+payload
+    body -raw - json
+
+    {
+    "a": 2,
+    "b": 5,
+    "op": "+"
+    }
+
+send request
+POST
+https://6b5fmogruzkt7no6wclnmey6jm0rlwbq.lambda-url.us-east-2.on.aws/
+Response:
+{
+    "Message": "Forbidden"
+}
+
+GRANT Permission:
+grants lambda:invokeFunctionUrl permissions
+
+---
+Multiline char 
+    for windows = `
+    for mac = \

@@ -1,0 +1,15 @@
+AWS Step Functions - Orchestrate Distributed Transactions with Saga Pattern
+---
+customer place an order in our e-commerce application
+	api gateway redirect to request to order microservice
+	order microservice get processed and forward to
+		Inventory service and then
+		Payment Service
+			to provide fullfilment processes.
+---
+What if we faced a network failure and the payment gateway has time-out ?
+
+In this case, the solution is use the SAGA Pattern.
+With using SAGA Pattern,
+	If any transaction fails in the workflow
+		the SAGA executes a series of compensating steps that rollback the changes.

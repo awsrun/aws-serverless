@@ -1,0 +1,23 @@
+{
+    "requestContext": {
+        "routeKey": "sendMessage",
+        "messageId": "VqYtteBTiYcCIhw=",
+        "eventType": "MESSAGE",
+        "extendedRequestId": "VqYttEuPCYcF5eQ=",
+        "requestTime": "22/Jul/2022:09:31:03 +0000",
+        "messageDirection": "IN",
+        "stage": "production",
+        "connectedAt": 1658482069004,
+        "requestTimeEpoch": 1658482263534,
+        "identity": {
+            "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36",
+            "sourceIp": "24.133.213.56"
+        },
+        "requestId": "VqYttEuPCYcF5eQ=",
+        "domainName": "2plgyw5uej.execute-api.us-east-2.amazonaws.com",
+        "connectionId": "VqYPUd_ciYcCIhw=",
+        "apiId": "2plgyw5uej"
+    },
+    "body": "{ \t\"action\": \"sendMessage\", \t\"message\": \"Hello from websocket chat app !\" }",
+    "isBase64Encoded": false
+}

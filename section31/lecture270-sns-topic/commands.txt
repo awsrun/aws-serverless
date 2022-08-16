@@ -1,0 +1,25 @@
+Create and Delete Topic on Amazon SNS using AWS SDK
+---
+Commands :
+	CreateTopicCommand
+	ListTopicsCommand
+	DeleteTopicCommand
+---
+npm init -y
+npm install @aws-sdk/client-sns
+---
+Create Client Object:
+
+snsClient.js
+import { SNSClient } from "@aws-sdk/client-sns";
+const REGION = "us-east-2";
+const snsClient = new SNSClient({ region: REGION });
+export { snsClient };
+
+---
+Subscribe and Unubscribe from Topic on Amazon SNS using AWS SDK
+
+ListSubscriptionsByTopicCommand
+SubscribeCommand
+ConfirmSubscriptionCommand
+UnsubscribeCommand

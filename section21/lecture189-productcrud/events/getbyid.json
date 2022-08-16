@@ -1,0 +1,83 @@
+{
+    "resource": "/product/{id}",
+    "path": "/product/1",
+    "httpMethod": "GET",
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Host": "bh8vlvi5c2.execute-api.us-east-2.amazonaws.com",
+        "Postman-Token": "0bc5d1c2-badf-4cce-bdd2-6d6f5511a4b8",
+        "User-Agent": "PostmanRuntime/7.29.2",
+        "X-Amzn-Trace-Id": "Root=1-62e52782-312216702edc66947ef8fecf",
+        "X-Forwarded-For": "24.133.213.56",
+        "X-Forwarded-Port": "443",
+        "X-Forwarded-Proto": "https"
+    },
+    "multiValueHeaders": {
+        "Accept": [
+            "*/*"
+        ],
+        "Accept-Encoding": [
+            "gzip, deflate, br"
+        ],
+        "Host": [
+            "bh8vlvi5c2.execute-api.us-east-2.amazonaws.com"
+        ],
+        "Postman-Token": [
+            "0bc5d1c2-badf-4cce-bdd2-6d6f5511a4b8"
+        ],
+        "User-Agent": [
+            "PostmanRuntime/7.29.2"
+        ],
+        "X-Amzn-Trace-Id": [
+            "Root=1-62e52782-312216702edc66947ef8fecf"
+        ],
+        "X-Forwarded-For": [
+            "24.133.213.56"
+        ],
+        "X-Forwarded-Port": [
+            "443"
+        ],
+        "X-Forwarded-Proto": [
+            "https"
+        ]
+    },
+    "queryStringParameters": null,
+    "multiValueQueryStringParameters": null,
+    "pathParameters": {
+        "id": "1"
+    },
+    "stageVariables": null,
+    "requestContext": {
+        "resourceId": "sylpim",
+        "resourcePath": "/product/{id}",
+        "httpMethod": "GET",
+        "extendedRequestId": "WFMcdEx_iYcFQWA=",
+        "requestTime": "30/Jul/2022:12:43:46 +0000",
+        "path": "/prod/product/1",
+        "accountId": "308360398142",
+        "protocol": "HTTP/1.1",
+        "stage": "prod",
+        "domainPrefix": "bh8vlvi5c2",
+        "requestTimeEpoch": 1659185026780,
+        "requestId": "396c0a64-9eb1-47bb-852b-f3810ebc81ad",
+        "identity": {
+            "cognitoIdentityPoolId": null,
+            "accountId": null,
+            "cognitoIdentityId": null,
+            "caller": null,
+            "sourceIp": "24.133.213.56",
+            "principalOrgId": null,
+            "accessKey": null,
+            "cognitoAuthenticationType": null,
+            "cognitoAuthenticationProvider": null,
+            "userArn": null,
+            "userAgent": "PostmanRuntime/7.29.2",
+            "user": null
+        },
+        "domainName": "bh8vlvi5c2.execute-api.us-east-2.amazonaws.com",
+        "apiId": "bh8vlvi5c2"
+    },
+    "body": null,
+    "isBase64Encoded": false
+}

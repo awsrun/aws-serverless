@@ -1,0 +1,19 @@
+Deploy and Test Order Acknowledgment Microservices Lambda
+---
+zip and deploy lambda Function
+
+---
+POST payload:
+{
+  "username":"swn",
+  "item":"iphone",
+  "status":"CREATED",
+  "type":"SHIP_REQUIRED"
+}
+
+---
+Same logs
+"Message\" : \"{\\\"item\\\":\\\"iphone\\\",\\\"status\\\":\\\"CREATED\\\",\\\"type\\\":\\\"SHIP_REQUIRED\\\",\\\"id\\\":\\\"6294baa8-23a9-47f5-b5fd-a7c647b2e824\\\"}\"
+
+So this comes from
+	Lambda -> SNS -> SQS -> Lambda

@@ -1,0 +1,79 @@
+Develop Order Acknowledgment Microservices Lambda Function Code
+---
+add index.js
+---
+create package.json
+npm init -y
+
+set type module
+	"main": "index.js",
+  "type": "module",
+---
+Install required packages:
+	uuid
+	dynamodb-client
+    util-dynamodb
+	sns-client
+
+Run Commands:
+https://www.npmjs.com/package/uuid
+npm install uuid
+
+PUBLISH SNS
+https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-sns/
+npm install @aws-sdk/client-sns
+
+DYNAMODB
+https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-dynamodb/index.html
+npm install @aws-sdk/client-dynamodb
+https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/modules/_aws_sdk_util_dynamodb.html
+npm install @aws-sdk/util-dynamodb
+
+---
+Develop Lambda
+  // pseo code
+	// 1- get request body payload
+	// 2- generate id with uuid library and prepare payload	
+	// 3- publish message to sns topic with using sns sdk package
+	// 4- save order item into dynamodb  with using dnamodb sdk package
+	// 5- return back snyc order payload with generated id to the api gateway 
+
+Expected payload:
+{
+  "username":"swn",
+  "item":"iphone",
+  "status":"CREATED",
+  "type":"SHIP_REQUIRED"
+}
+
+---
+Develop 3-4 Steps:
+// 3- publish message to sns topic with using sns sdk package
+
+SNS Client - AWS SDK for JavaScript v3
+https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-sns/
+PublishCommand
+
+>
+create
+snsClient.js
+
+>
+ENV VARIABLES
+set ENV
+TOPIC_ARN - xxxx
+
+---
+// 4- save order item into dynamodb with using dnamodb sdk package
+
+DynamoDB Client - AWS SDK for JavaScript v3
+https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-dynamodb/index.html
+
+>
+create
+ddbClient.js
+
+>
+ENV VARIABLES
+set ENV
+DYNAMODB_TABLE_NAME - order

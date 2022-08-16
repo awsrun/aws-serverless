@@ -1,0 +1,13 @@
+Hands-on Lab : AWS Lambda Destination to SQS - DLQ Case
+---
+Async Invoke with CLI :
+
+aws lambda invoke \
+  --function-name my-function  \
+      --invocation-type Event \
+          --cli-binary-format raw-in-base64-out \
+              --payload '{ "key": "value" }' response.json
+
+---
+RUN Command:
+aws lambda invoke --function-name asyc-destination-func --invocation-type Event response.json

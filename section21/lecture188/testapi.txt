@@ -1,0 +1,23 @@
+Testing Exposing API Urls:
+
+product
+  // GET /product
+  // POST /product
+
+https://bh8vlvi5c2.execute-api.us-east-2.amazonaws.com/prod/product
+
+product/{id}	
+  // GET /product/{id}
+  // PUT /product/{id}
+  // DELETE /product/{id}
+
+https://bh8vlvi5c2.execute-api.us-east-2.amazonaws.com/prod/product/{id}
+
+---
+POST Payload:
+Select Body-Raw-JSON on Postman
+{
+	"id" : 1,
+	"name" : "IPhone",
+	"price" : 900
+}

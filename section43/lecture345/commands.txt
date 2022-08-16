@@ -1,0 +1,54 @@
+Create Infrastructure for Amazon EventBridge Customer Event Bus with Event-Driven Microservice Architecture
+---
+We will create
+	api gateway
+	basket ms lambda function
+	eventbridge custom event bus
+	sqs - order queue
+	order ms lambda function	
+	notification ms lambda function
+
+---
+Create 
+	Amazon EventBridge Customer Event Bus
+
+EventBridge has 3 main core concepts:
+	1- Custom event bus - CheckoutBasketEventBus
+	2- Event Rule with event pattern - CheckoutBasketRule
+	3- Targets - create SQS order queue and notification ms target for our custom event bus
+
+---
+Amazon EventBridge Custom EventBus:
+
+Event bus name:
+CheckoutBasketEventBus
+
+Rule name:
+CheckoutBasketRule
+
+Event Pattern:
+{
+  "detail-type": ["CheckoutBasket"],
+  "source": ["com.swn.basket.checkoutbasket"]
+}
+
+---
+Test with publish event message to Event Bridge Custom Bus:
+
+CheckoutBasketEventBus
+
+Send events
+
+Event source
+com.swn.basket.checkoutbasket
+
+detail-type
+CheckoutBasket
+
+Event detail
+{
+  "item":"iphone",
+   "price":"100"
+}
+
+---

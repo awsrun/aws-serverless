@@ -1,0 +1,22 @@
+Amazon EventBridge - Developing with AWS SDK
+---
+EventBridge Client - AWS SDK for JavaScript v3
+https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-eventbridge/index.html
+
+Commands :
+	PutEventsCommand
+	PutRuleCommand
+	PutTargetsCommand
+---
+npm init -y
+npm install @aws-sdk/client-eventbridge
+---
+Create Client Object:
+
+eventBridgeClient.js
+import { EventBridgeClient } from "@aws-sdk/client-eventbridge";
+const REGION = "us-east-2";
+const ebClient = new EventBridgeClient({ region: REGION });
+export { ebClient };
+
+---

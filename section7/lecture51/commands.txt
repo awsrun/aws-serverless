@@ -1,0 +1,28 @@
+AWS Lambda CloudWatch Logs using AWS CLI
+
+AWS Lambda CLI Refence Documentation
+https://awscli.amazonaws.com/v2/documentation/api/latest/reference/logs/index.html
+
+See
+	describe-log-groups
+	get-log-events
+
+Multiline char 
+	    for windows = `
+	    for mac = \
+
+1- Get the log group name:
+aws logs describe-log-groups `
+	--query logGroups[*].logGroupName
+
+2- List the log streams for that log group:
+aws logs describe-log-streams `
+	--log-group-name '/aws/lambda/my-function2' `
+	--query logStreams[*].logStreamName
+
+3- Get the log events for that stream:
+aws logs get-log-events `
+	--log-group-name '/aws/lambda/my-function2' `
+	--log-stream-name '2022/05/10/[$LATEST]311cb43cd18843c2af37a60b2df0c110'
+
+

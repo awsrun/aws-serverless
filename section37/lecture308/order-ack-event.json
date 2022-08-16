@@ -1,0 +1,85 @@
+{
+    "resource": "/order",
+    "path": "/order",
+    "httpMethod": "POST",
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Content-Type": "application/json",
+        "Host": "uoukbjo29h.execute-api.us-east-2.amazonaws.com",
+        "Postman-Token": "be94cc92-0699-4544-b769-4dcc1d018df5",
+        "User-Agent": "PostmanRuntime/7.29.2",
+        "X-Amzn-Trace-Id": "Root=1-62f390d8-2f142d2d0fa359fe04024d17",
+        "X-Forwarded-For": "24.133.213.56",
+        "X-Forwarded-Port": "443",
+        "X-Forwarded-Proto": "https"
+    },
+    "multiValueHeaders": {
+        "Accept": [
+            "*/*"
+        ],
+        "Accept-Encoding": [
+            "gzip, deflate, br"
+        ],
+        "Content-Type": [
+            "application/json"
+        ],
+        "Host": [
+            "uoukbjo29h.execute-api.us-east-2.amazonaws.com"
+        ],
+        "Postman-Token": [
+            "be94cc92-0699-4544-b769-4dcc1d018df5"
+        ],
+        "User-Agent": [
+            "PostmanRuntime/7.29.2"
+        ],
+        "X-Amzn-Trace-Id": [
+            "Root=1-62f390d8-2f142d2d0fa359fe04024d17"
+        ],
+        "X-Forwarded-For": [
+            "24.133.213.56"
+        ],
+        "X-Forwarded-Port": [
+            "443"
+        ],
+        "X-Forwarded-Proto": [
+            "https"
+        ]
+    },
+    "queryStringParameters": null,
+    "multiValueQueryStringParameters": null,
+    "pathParameters": null,
+    "stageVariables": null,
+    "requestContext": {
+        "resourceId": "t639cy",
+        "resourcePath": "/order",
+        "httpMethod": "POST",
+        "extendedRequestId": "WpOR5FCsiYcFwZA=",
+        "requestTime": "10/Aug/2022:11:04:56 +0000",
+        "path": "/prod/order",
+        "accountId": "308360398142",
+        "protocol": "HTTP/1.1",
+        "stage": "prod",
+        "domainPrefix": "uoukbjo29h",
+        "requestTimeEpoch": 1660129496754,
+        "requestId": "187a7983-427e-4a69-9bee-51eeebea50f5",
+        "identity": {
+            "cognitoIdentityPoolId": null,
+            "accountId": null,
+            "cognitoIdentityId": null,
+            "caller": null,
+            "sourceIp": "24.133.213.56",
+            "principalOrgId": null,
+            "accessKey": null,
+            "cognitoAuthenticationType": null,
+            "cognitoAuthenticationProvider": null,
+            "userArn": null,
+            "userAgent": "PostmanRuntime/7.29.2",
+            "user": null
+        },
+        "domainName": "uoukbjo29h.execute-api.us-east-2.amazonaws.com",
+        "apiId": "uoukbjo29h"
+    },
+    "body": "{\r\n  \"username\":\"swn\",\r\n  \"item\":\"iphone\",\r\n  \"status\":\"CREATED\",\r\n  \"type\":\"SHIP_REQUIRED\"\r\n}",
+    "isBase64Encoded": false
+}

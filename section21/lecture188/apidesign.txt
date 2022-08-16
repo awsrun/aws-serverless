@@ -1,0 +1,16 @@
+Product API Gateway API Design:
+
+Root name
+	product
+
+and under this name, we have GET and POST methods
+	// GET /product
+	// POST /product
+
+and we have single product with id parameters
+
+	product.addResource('{id}');
+
+	// GET /product/{id}
+	// PUT /product/{id}
+	// DELETE /product/{id}

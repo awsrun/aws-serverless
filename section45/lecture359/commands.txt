@@ -1,0 +1,11 @@
+Create State Machine from Scratch with AWS Step Functions Workflow Studio
+---
+
+Navigate to Workflow Studio
+Create a state machine
+Review the auto-generated Amazon States Language definition
+Start a new execution
+Update your state machine
+Clean up
+
+---

@@ -1,0 +1,69 @@
+Hands-on Lab: Greeting Project
+
+1- Develop Lambda Function Code
+2- zip function code
+3- create lambda function with cli
+4- invoke lambda function with cli
+
+---
+1- Develop Lambda Function Code
+
+goto index.js
+exports.handler = async function() {    
+  }
+
+---
+2- zip function code
+
+Run Command:
+mac
+	zip function.zip index.js
+windows
+	Compress-Archive index.js function.zip
+manuel
+	go to index.js
+        Right click index.js
+		    Send to -> Compressed (zip) folder
+---
+3- create lambda function with cli
+
+Get Role:
+aws iam get-role --role-name lambda-ex
+
+Get role arn:
+"Arn": "arn:aws:iam::308360398142:role/lambda-ex"
+
+Run Command:
+aws lambda create-function `
+    --function-name greeting `
+    --runtime nodejs14.x `
+    --zip-file fileb://function.zip `
+    --handler index.handler `
+    --role arn:aws:iam::308360398142:role/lambda-ex
+
+---
+4- invoke lambda function with cli
+
+Create event.json file into lecture folder
+
+event.json
+{
+    "name": "Mehmet",
+    "city": "Istanbul",
+    "time": "morning",
+    "day": "Wednesday"
+}
+
+Invoke Command:
+aws lambda invoke --function-name greeting --cli-binary-format raw-in-base64-out --payload file://event.json response.json
+
+aws lambda invoke `
+    --function-name greeting `
+    --cli-binary-format raw-in-base64-out `
+    --payload file://event.json `
+    response.json
+
+---
+Multiline char 
+    for windows = `
+    for mac = \

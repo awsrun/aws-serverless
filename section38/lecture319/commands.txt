@@ -1,0 +1,17 @@
+Hands-on Labs : Test and Verify DynamoDB Streams Event Source Mapping Lambda Function
+---
+Create item in Order table
+
+id - 1
+name - iphone order
+status - IN_PROGRESS
+date - 12.12.2022
+
+---
+CloudWatch Logs
+
+---
+Update order item
+
+change order status
+SHIPMENT

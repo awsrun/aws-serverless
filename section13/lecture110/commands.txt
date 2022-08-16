@@ -1,0 +1,22 @@
+Understanding How WebSocket API Trigger Lambda with Event Json Object
+---
+WebSocket URL: wss://82g51mj6mc.execute-api.us-east-2.amazonaws.com/production
+Connection URL: https://82g51mj6mc.execute-api.us-east-2.amazonaws.com/
+
+$connect
+- Connecting to: wss://qf8mj2sugd.execute-api.us-east-2.amazonaws.com/production
+- Connection established
+
+$disconnect
+- Disconnecting to: wss://qf8mj2sugd.execute-api.us-east-2.amazonaws.com/production
+- Connection disconnected
+
+sendMessage
+{
+	"action": "sendMessage",
+	"message": "Hello from websocket chat app !"
+}
+See Logs
+▲ { "action": "sendMessage", 	"message": "Hello from websocket !" }
+
+$default

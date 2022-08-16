@@ -1,0 +1,9 @@
+Hands-on Lab: Create Infrasturcture for Amazon S3, AWS Lambda and DynamoDB
+---
+Create S3 Bucket
+Add Sample Object
+
+Create Lambda Function
+Add Trigger to S3
+
+Create DynamoDB Table

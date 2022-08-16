@@ -1,0 +1,1 @@
+console.log('This example from index.js file !');

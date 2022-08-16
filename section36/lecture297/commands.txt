@@ -1,0 +1,31 @@
+Hands-on Lab: Amazon SQS Queue Polling From AWS Lambda
+---
+Create Amazon SQS queue
+defaults
+my-queue
+Create
+
+>
+Create AWS Lambda function
+defaults
+my-function
+Create
+
+>
+Lambda
+	Permission
+		Role
+
+IAM role
+
+Add Permission
+	Attach Policies
+
+Find
+	AWSLambdaSQSQueueExecutionRole
+
+>
+Add Trigger
+
+Add SQS
+	default

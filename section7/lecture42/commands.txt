@@ -1,0 +1,9 @@
+Using AWS Lambda with the AWS CLI
+
+Run Commands :
+aws --version
+aws lambda list-functions
+aws lambda get-function --function-name my-function
+
+AWS CLI Commands Reference Doc for AWS Lambda:
+https://awscli.amazonaws.com/v2/documentation/api/latest/reference/lambda/list-functions.html

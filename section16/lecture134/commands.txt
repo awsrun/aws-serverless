@@ -1,0 +1,41 @@
+Create DynamoDB Table with AWS CLI
+---
+AWS CLI example creates a new Order table using create-table.
+
+Run Command:
+mac:
+aws dynamodb create-table \
+    --table-name Order \
+    --attribute-definitions \
+        AttributeName=id,AttributeType=S \
+        AttributeName=status,AttributeType=S \
+    --key-schema \
+        AttributeName=id,KeyType=HASH \
+        AttributeName=status,KeyType=RANGE \
+    --provisioned-throughput \
+        ReadCapacityUnits=5,WriteCapacityUnits=5 \
+    --table-class STANDARD
+
+windows:
+aws dynamodb create-table `
+    --table-name Order `
+    --attribute-definitions `
+        AttributeName=id,AttributeType=S `
+        AttributeName=status,AttributeType=S `
+    --key-schema `
+        AttributeName=id,KeyType=HASH `
+        AttributeName=status,KeyType=RANGE `
+    --provisioned-throughput `
+        ReadCapacityUnits=5,WriteCapacityUnits=5 `
+    --table-class STANDARD
+
+---
+Verify DynamoDB has finished creating the table:
+
+RUN COMMAND:
+aws dynamodb describe-table --table-name Order
+
+---
+Multiline char 
+	    for windows = `
+	    for mac = \

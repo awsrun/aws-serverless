@@ -1,0 +1,22 @@
+Static Website Hosting with Amazon S3
+---
+Step 1: Create a bucket
+    Create new bucket
+
+Step 2: Enable static website hosting
+    Bucket - Properties - static website hosting - Enable
+
+Step 3: Edit Block Public Access settings
+    Bucket - Permissions - Clear Block Public Access
+
+Step 4: Add bucket policy that makes bucket content publicly available
+    Buckets - Permissions - Bucket Policy
+
+Step 5: Configure an index document
+    goto - index.html
+
+Step 6: Test your website endpoint
+    Bucket - Properties - Static Website Hosting Url
+
+Step 7: Clean up Resources
+    Empty and Delete S3 Bucket

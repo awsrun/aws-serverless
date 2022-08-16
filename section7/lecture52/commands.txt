@@ -1,0 +1,57 @@
+Update AWS Lambda Function Code using AWS CLI
+
+1- Develop lambda code to update one
+2- zip function code
+3- update lambda function with cli
+4- invoke updated lambda function with cli
+
+---
+1- Develop lambda code to update
+    index.js
+
+---
+2- zip function code
+
+Run Command:
+mac
+	zip function.zip index.js
+windows
+	Compress-Archive index.js function.zip
+manuel
+	go to index.js
+        Right click index.js
+		    Send to -> Compressed (zip) folder
+---
+3- update function code
+
+Run Command:
+aws lambda update-function-code --function-name my-function2 --zip-file fileb://function.zip
+
+aws lambda update-function-code `
+    --function-name my-function2 `
+    --zip-file fileb://function.zip
+
+---
+4- invoke updated lambda function with cli
+
+Create event.json file into lecture folder
+event.json
+{
+    "num1" : 3,
+    "num2" : 4
+}
+
+Invoke Lambda Function with passing event.json file
+
+Invoke Command:
+aws lambda invoke --function-name my-function2 --cli-binary-format raw-in-base64-out --payload file://event.json response.json
+
+Multiline char 
+	for windows = `
+	for mac = \
+
+aws lambda invoke `
+	--function-name my-function2 `
+	--cli-binary-format raw-in-base64-out `
+	--payload file://event.json `
+	response.json

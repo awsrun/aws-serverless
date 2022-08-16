@@ -1,0 +1,36 @@
+AWS Lambda Asynchronous Invocation using AWS CLI
+---
+Create event.json file into lecture folder
+
+event.json
+{
+    "a": 2,
+    "b": 5,
+    "op": "+"
+}
+
+---
+Snyc Invocation:
+
+Invoke Command:
+aws lambda invoke `
+    --function-name calculator `
+    --cli-binary-format raw-in-base64-out `
+    --payload file://event.json `
+    response.json
+
+---
+Asnyc Invocation:
+
+Invoke Command:
+aws lambda invoke `
+  --function-name calculator  `
+  --invocation-type Event `
+  --cli-binary-format raw-in-base64-out `
+  --payload file://event.json `
+  response.json
+
+---
+Multiline char 
+    for windows = `
+    for mac = \

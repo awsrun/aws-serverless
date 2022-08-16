@@ -1,0 +1,6 @@
+Hands-on Lab: Develop Lambda Function for async invocation from Amazon S3 and persist on DynamoDB
+---
+1 Create infrastructure on AWS Cloud
+2 Develop Lambda code for interacting S3 and DynamoDB
+
+---

@@ -1,0 +1,9 @@
+Deploy Node.js Lambda functions with .zip file archives
+
+Run Command:
+mac
+	zip function.zip index.js
+windows
+	Compress-Archive index.js function.zip
+manuel
+	go to index.js - right click - Send to -> Compressed (zip) folder

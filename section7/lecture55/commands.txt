@@ -1,0 +1,68 @@
+AWS Lambda Function Logging in Node.js Example
+
+1- Develop Lambda Function Code
+2- zip function code
+3- update lambda function with cli
+4- invoke updated lambda function with cli
+
+---
+1- Develop Lambda Function Code
+
+exports.handler = async function(event, context) {  
+  console.log("Standart Log")
+  console.info("info Log")
+  console.warn("Warning Log")
+  
+  const body = 
+        `Function name: ${context.functionName}
+         LogStream name: ${context.logStreamName}
+        `
+    return body;    
+}
+
+---
+2- zip function code
+
+Run Command:
+mac
+	zip function.zip index.js
+windows
+	Compress-Archive index.js function.zip
+manuel
+	go to index.js
+        Right click index.js
+		    Send to -> Compressed (zip) folder
+---
+3- update lambda function with cli
+
+Run Command:
+aws lambda update-function-code --function-name my-function3 --zip-file fileb://function.zip
+
+aws lambda update-function-code `
+    --function-name my-function3 `
+    --zip-file fileb://function.zip
+
+---
+4- invoke lambda function with cli
+
+Create event.json file into lecture folder
+
+event.json
+{
+    "key":"value"
+}
+
+Invoke Command:
+aws lambda invoke --function-name my-function3 --cli-binary-format raw-in-base64-out --payload file://event.json response.json
+
+Multiline char 
+    for windows = `
+    for mac = \
+
+aws lambda invoke `
+    --function-name my-function3 `
+    --cli-binary-format raw-in-base64-out `
+    --payload file://event.json `
+    response.json
+
+---

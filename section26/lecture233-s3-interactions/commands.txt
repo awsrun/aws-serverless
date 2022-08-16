@@ -1,0 +1,7 @@
+Understanding Amazon S3 Interactions - Working with Buckets and Objects
+---
+See all actions of S3
+https://docs.aws.amazon.com/AmazonS3/latest/API/API_Operations_Amazon_Simple_Storage_Service.html
+
+AWS SDK for JavaScript v3 API Reference Guide
+https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-s3/

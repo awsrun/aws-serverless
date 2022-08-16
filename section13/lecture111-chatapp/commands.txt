@@ -1,0 +1,33 @@
+Develop Lambda Function for Incoming WebSocket API Event Json Object
+---
+WebSocket URL: wss://82g51mj6mc.execute-api.us-east-2.amazonaws.com/production
+Connection URL: https://82g51mj6mc.execute-api.us-east-2.amazonaws.com/
+
+$connect
+- Connecting to: wss://qf8mj2sugd.execute-api.us-east-2.amazonaws.com/production
+- Connection established
+
+$disconnect
+- Disconnecting to: wss://qf8mj2sugd.execute-api.us-east-2.amazonaws.com/production
+- Connection disconnected
+
+sendMessage
+{
+	"action": "sendMessage",
+	"message": "Hello from websocket chat app !"
+}
+See Logs
+▲ { "action": "sendMessage", 	"message": "Hello from websocket !" }
+
+$default
+
+---
+SDK DOCUMENT:
+https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/ApiGatewayManagementApi.html
+
+---
+Add Required Permission
+If you don't add required permission, you will get AccessDeniedException ERROR.
+
+2022-05-25T10:18:41.858Z	3e3eb9cc-f161-497a-b9b3-d4bac719d750	
+ERROR	AccessDeniedException: User: arn:aws:sts::308360398142:assumed-role/websocket-function-role-s255prw8/websocket-function is not authorized to perform: execute-api:ManageConnections on resource: arn:aws:execute-api:us-east-2:********8142:qf8mj2sugd/production/POST/@connections/{connectionId}

@@ -1,0 +1,85 @@
+{
+    "resource": "/basket",
+    "path": "/basket",
+    "httpMethod": "POST",
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Content-Type": "application/json",
+        "Host": "ngbql8rtxj.execute-api.us-east-2.amazonaws.com",
+        "Postman-Token": "084c7388-afb9-4263-9905-dd8cf3877010",
+        "User-Agent": "PostmanRuntime/7.29.2",
+        "X-Amzn-Trace-Id": "Root=1-62f77c85-66da925c5f1e1cdc249223cd",
+        "X-Forwarded-For": "24.133.213.56",
+        "X-Forwarded-Port": "443",
+        "X-Forwarded-Proto": "https"
+    },
+    "multiValueHeaders": {
+        "Accept": [
+            "*/*"
+        ],
+        "Accept-Encoding": [
+            "gzip, deflate, br"
+        ],
+        "Content-Type": [
+            "application/json"
+        ],
+        "Host": [
+            "ngbql8rtxj.execute-api.us-east-2.amazonaws.com"
+        ],
+        "Postman-Token": [
+            "084c7388-afb9-4263-9905-dd8cf3877010"
+        ],
+        "User-Agent": [
+            "PostmanRuntime/7.29.2"
+        ],
+        "X-Amzn-Trace-Id": [
+            "Root=1-62f77c85-66da925c5f1e1cdc249223cd"
+        ],
+        "X-Forwarded-For": [
+            "24.133.213.56"
+        ],
+        "X-Forwarded-Port": [
+            "443"
+        ],
+        "X-Forwarded-Proto": [
+            "https"
+        ]
+    },
+    "queryStringParameters": null,
+    "multiValueQueryStringParameters": null,
+    "pathParameters": null,
+    "stageVariables": null,
+    "requestContext": {
+        "resourceId": "w5q4ad",
+        "resourcePath": "/basket",
+        "httpMethod": "POST",
+        "extendedRequestId": "WzBk8Hd9iYcFuLA=",
+        "requestTime": "13/Aug/2022:10:27:17 +0000",
+        "path": "/prod/basket",
+        "accountId": "308360398142",
+        "protocol": "HTTP/1.1",
+        "stage": "prod",
+        "domainPrefix": "ngbql8rtxj",
+        "requestTimeEpoch": 1660386437848,
+        "requestId": "e1c5d16b-2cb1-4ce9-88ab-efa36d714ee3",
+        "identity": {
+            "cognitoIdentityPoolId": null,
+            "accountId": null,
+            "cognitoIdentityId": null,
+            "caller": null,
+            "sourceIp": "24.133.213.56",
+            "principalOrgId": null,
+            "accessKey": null,
+            "cognitoAuthenticationType": null,
+            "cognitoAuthenticationProvider": null,
+            "userArn": null,
+            "userAgent": "PostmanRuntime/7.29.2",
+            "user": null
+        },
+        "domainName": "ngbql8rtxj.execute-api.us-east-2.amazonaws.com",
+        "apiId": "ngbql8rtxj"
+    },
+    "body": "{\r\n  \"item\":\"iphone\",\r\n  \"price\":150,\r\n  \"detailtype\":\"CheckoutBasket\",\r\n  \"source\": \"com.swn.basket.checkoutbasket\"\r\n}",
+    "isBase64Encoded": false
+}

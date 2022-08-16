@@ -1,0 +1,23 @@
+Update Data into DynamoDB Table with AWS CLI
+---
+Run Command:
+mac:
+aws dynamodb update-item \
+    --table-name Order \
+    --key '{ "id": {"S": "1"}, "status": {"S": "DELIVERY"}}' \
+    --update-expression "SET orderDate = :newval" \
+    --expression-attribute-values '{":newval":{"S":"2022-06-06"}}' \
+    --return-values ALL_NEW
+
+windows:
+aws dynamodb update-item `
+    --table-name Order `
+    --key '{ ""id"": {""S"": ""1""}, ""status"": {""S"": ""DELIVERY""}}' `
+    --update-expression "SET orderDate = :newval" `
+    --expression-attribute-values '{ "":newval"": {""S"": ""2022-06-06""}}' `
+    --return-values ALL_NEW
+
+---
+Multiline char 
+	    for windows = `
+	    for mac = \

@@ -1,0 +1,5 @@
+e-commerce
+
+order table
+	userName - PK
+	orderDate - SK

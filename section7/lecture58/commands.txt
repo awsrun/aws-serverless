@@ -1,0 +1,10 @@
+AWS Lambda Clean up Resources
+
+Check Lambda Function details with aws cli	
+aws lambda list-functions --max-items 10
+aws lambda get-function --function-name my-function
+
+Run Command:
+aws lambda delete-function --function-name my-function
+aws lambda delete-function --function-name my-function2
+aws lambda delete-function --function-name my-function3

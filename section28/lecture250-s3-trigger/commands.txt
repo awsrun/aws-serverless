@@ -1,0 +1,6 @@
+Hands-on Lab: Develop Lambda Function for async invocation from Amazon S3
+---
+Develop Lambda Function:
+we will have 2 interactions
+    - get bucket detail from S3
+    - write dynamodb table

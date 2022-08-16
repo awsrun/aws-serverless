@@ -1,0 +1,25 @@
+Hands-on Lab : AWS Lambda Event Filtering from SQS data
+---
+Use Case:
+Create corporate customers - lambda only interest corporate customer inserts
+
+Creating customer payload for SQS - send messages:
+message1:
+{
+	"customerId":1,
+	"name":"company1",
+	"type":"CORPORATE"
+}
+message2:
+{
+	"customerId":2,
+	"name":"mehmet",
+	"type":"INDIVIDUAL"
+}
+---
+Event Filter:
+{
+    "body": {
+        "type": [ "CORPORATE" ]
+    }
+}

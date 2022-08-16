@@ -1,0 +1,85 @@
+AWS Lambda Context Object in Node.js Function
+
+1- Develop Lambda Function Code
+2- zip function code
+3- create lambda function with cli
+4- invoke updated lambda function with cli
+
+---
+1- Develop Lambda Function Code
+
+exports.handler = async (event, context) => {
+    console.log('Remaining time: ', context.getRemainingTimeInMillis())
+    console.log('Function name: ', context.functionName)
+
+    const body = 
+        `Function name: ${context.functionName}
+         LogStream name: ${context.logStreamName}
+        `
+    return body;
+}
+
+---
+2- zip function code
+
+Run Command:
+mac
+	zip function.zip index.js
+windows
+	Compress-Archive index.js function.zip
+manuel
+	go to index.js
+        Right click index.js
+		    Send to -> Compressed (zip) folder
+---
+3- create lambda function with cli
+
+Get Role:
+aws iam get-role --role-name lambda-ex
+       
+Get role arn:
+	"Arn": "arn:aws:iam::308360398142:role/lambda-ex",
+
+Run Command:
+
+windows
+aws lambda create-function `
+    --function-name my-function3 `
+    --runtime nodejs14.x `
+    --zip-file fileb://function.zip `
+    --handler index.handler `
+    --role arn:aws:iam::308360398142:role/lambda-ex
+
+mac
+aws lambda create-function \
+    --function-name my-function3 \
+    --runtime nodejs14.x \
+    --zip-file fileb://function.zip \
+    --handler index.handler \
+    --role arn:aws:iam::308360398142:role/lambda-ex
+---
+4- invoke lambda function with cli
+
+Create event.json file into lecture folder
+
+event.json
+{
+    "key":"value"
+}
+
+Invoke Command:
+aws lambda invoke --function-name my-function3 --cli-binary-format raw-in-base64-out --payload file://event.json response.json
+
+Multiline char 
+    for windows = `
+    for mac = \
+
+aws lambda invoke `
+    --function-name my-function3 `
+    --cli-binary-format raw-in-base64-out `
+    --payload file://event.json `
+    response.json
+
+---
+See all context properties from official documentation:
+https://docs.aws.amazon.com/lambda/latest/dg/nodejs-context.html

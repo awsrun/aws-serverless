@@ -1,0 +1,14 @@
+AWS Lambda Environment Variables
+
+Configuring environment variables with the API
+aws lambda update-function-configuration --function-name my-function3 `
+    --environment "Variables={BUCKET=my-bucket,KEY=file.txt}"
+
+Run Command:
+aws lambda get-function-configuration --function-name my-function3
+
+---
+
+Multiline char 
+    for windows = `
+    for mac = \

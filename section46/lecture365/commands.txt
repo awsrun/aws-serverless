@@ -1,0 +1,25 @@
+Hands-on Lab: Saga Pattern for Orchestrate Distributed Transactions using AWS Step Functions
+---
+Design AWS Step Functions State Machine for Place Order Use Case:
+State Machine: Step Functions Workflow:
+
+Start
+  Task-Place Order
+  Choise-Is Placed Order?    
+	If "yes"
+	  Task-Update Inventory
+	  Choise-Is Inventory Updated?	    
+		If "yes"
+		  Task-Make Payment
+		  Choise-Is Payment Success?		    
+			If "yes"
+			  Success-Success Order
+			If "no"
+			  Task-Revert Payment			  			  			  
+		If "no"		  
+		  Task-Revert Inventory
+		  Task-Remove Order
+	If "no"
+	  Fail-Fail Order
+End
+---

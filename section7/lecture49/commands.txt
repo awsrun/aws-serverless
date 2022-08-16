@@ -1,0 +1,27 @@
+Create AWS Lambda function with .zip file using AWS CLI
+
+AWS Lambda CLI Refence Documentation
+https://awscli.amazonaws.com/v2/documentation/api/latest/reference/lambda/index.html
+
+Get Role:
+aws iam get-role --role-name lambda-ex
+
+arn:aws:iam::308360398142:role/lambda-ex
+
+Run Command:
+
+windows:
+aws lambda create-function `
+    --function-name my-function2 `
+    --runtime nodejs14.x `
+    --zip-file fileb://function.zip `
+    --handler index.handler `
+    --role arn:aws:iam::308360398142:role/lambda-ex
+
+mac:
+aws lambda create-function \
+    --function-name my-function2 \
+    --runtime nodejs14.x \
+    --zip-file fileb://function.zip \
+    --handler index.handler \
+    --role arn:aws:iam::308360398142:role/lambda-ex

@@ -1,0 +1,43 @@
+Test E2E - Hands-on Labs : Event-Driven Microservice Architecture Using Amazon EventBridge, SQS and Lambda
+---
+Test from Postman 
+	from Client -> API Gateway -> Basket -> EventBridge -> SQS -> order  -> dynamodb
+														-> notification
+
+---
+Send 2 type of request:
+
+Event bus name
+CheckoutBasketEventBus
+
+CheckoutBasketRule:
+Event pattern:
+{
+  "detail-type": ["CheckoutBasket"],
+  "source": ["com.swn.basket.checkoutbasket"]
+}
+
+NotificationRule: 
+Event pattern:
+{
+  "detail-type": ["Notification"],
+  "source": ["com.swn.basket.notification"]
+}
+---
+POST
+
+Payload 1 :
+{
+  "item":"iphone",
+  "price":150,
+  "detailtype":"CheckoutBasket",
+  "source": "com.swn.basket.checkoutbasket"
+}
+
+Payload 2 :
+{
+  "notify":"price update",
+  "price":200,
+  "detailtype":"Notification",
+  "source": "com.swn.basket.notification"
+}

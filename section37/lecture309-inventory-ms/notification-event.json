@@ -1,0 +1,21 @@
+{
+    "Records": [
+        {
+            "messageId": "b4b009d0-534d-4190-bcf9-39517aa74950",
+            "receiptHandle": "AQEBAZUCKs4hkfKSqehTotO4HL8bGkRBFnxKw6XDgpqK0b2DM7+RgF9/jvuLjGUfF0R9D0pZhCQrBmwoIfpRDSyYb/eWs8RVOCw/yHJ0MGg15QfA8/4Cn6GP9nj0mFWgXDCEW4Sg870+Dj42n84Pj4dnrg6Eb+Ifn91ZMrbxRSraQrwnmX9QMv3OGb/wE1DhIVHEqwVZLpm2zu6a/+T4l8A/fbNkolypXFT2l/moL932YNDj8M1XjcSUzmRnfCRt4If0g8V3GrHWEjUwrWsYQEI8xJpXH/37BFNfMpTCgmvohpKjW/++Tt3v2R82WJCYjdY/qjfdEG88WeD3IX/jmyZLXhDXyUu1EpX+timLmbeLFCPWcXBRVgntSSBPTNH27+sj0kC5rFCfhID0VUaqpDsSng==",
+            "body": "{\n  \"Type\" : \"Notification\",\n  \"MessageId\" : \"a2279bb0-528a-5beb-a588-c0ddc1901b23\",\n  \"TopicArn\" : \"arn:aws:sns:us-east-2:308360398142:OrderTopic\",\n  \"Message\" : \"{\\\"username\\\":\\\"swn\\\",\\\"item\\\":\\\"iphone\\\",\\\"status\\\":\\\"CREATED\\\",\\\"type\\\":\\\"SHIP_REQUIRED\\\",\\\"id\\\":\\\"4115ae1c-80fb-4951-9326-26fe85f0c2d6\\\"}\",\n  \"Timestamp\" : \"2022-08-10T11:04:58.021Z\",\n  \"SignatureVersion\" : \"1\",\n  \"Signature\" : \"T9L015lqRpUUktPGWohBTtYfkoSBbeuVZ0MR3RNhdHju/1lZnG4yCD03YpjFw2fqFIASA7ERTY4fhdbR37ZsWxJfMLTDNldg51Bq1uU7kvx+luqOp6dGUg3o4WtjSK5sDvaGD+lGj++kLSifsx/E+SdWFVAMpOVGnB1OhGvOJTK2ZJCD54kNOZ4SmqxSKPn07okJv9evuvi28Dkm+0R77g8Fo4MlkfWso6VheiZp6xaRLdvRyD4Go4UqvSnnzN1gW2dIlxBqi5gW5dy5JiqoWkl+TVYkcvgYtuUfC/nNQ849Wkov2IbFzqCYuknLAsY53vnn/G9piraxhUc96OrJOA==\",\n  \"SigningCertURL\" : \"https://sns.us-east-2.amazonaws.com/SimpleNotificationService-56e67fcb41f6fec09b0196692625d385.pem\",\n  \"UnsubscribeURL\" : \"https://sns.us-east-2.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=arn:aws:sns:us-east-2:308360398142:OrderTopic:316e6815-1442-4067-8b83-43621f612f7b\"\n}",
+            "attributes": {
+                "ApproximateReceiveCount": "1",
+                "AWSTraceHeader": "Root=1-62f390d8-2f142d2d0fa359fe04024d17;Parent=34b2db2c0c45666b;Sampled=0",
+                "SentTimestamp": "1660129498048",
+                "SenderId": "AIDAJQR6QDGQ7PATMSYEY",
+                "ApproximateFirstReceiveTimestamp": "1660129498052"
+            },
+            "messageAttributes": {},
+            "md5OfBody": "e91c15edbbe4789e2618326852bb7e01",
+            "eventSource": "aws:sqs",
+            "eventSourceARN": "arn:aws:sqs:us-east-2:308360398142:notification-queue",
+            "awsRegion": "us-east-2"
+        }
+    ]
+}

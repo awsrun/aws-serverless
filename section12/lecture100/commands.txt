@@ -1,0 +1,23 @@
+Understanding How REST API Trigger Lambda with Event Json Object
+---
+
+GET
+https://cg9cloipv8.execute-api.us-east-2.amazonaws.com/product
+"Hello from Lambda!"
+
+GET by ID
+https://cg9cloipv8.execute-api.us-east-2.amazonaws.com/product/343
+"Hello from Lambda!"
+
+POST
+https://cg9cloipv8.execute-api.us-east-2.amazonaws.com/product
+payload:
+{
+    "name":"IPhone",
+    "price":"900"
+}
+"Hello from Lambda!"
+
+DELETE
+https://cg9cloipv8.execute-api.us-east-2.amazonaws.com/product/343
+"Hello from Lambda!"

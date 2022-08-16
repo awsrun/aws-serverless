@@ -1,0 +1,39 @@
+Develop Inventory Microservices Lambda Function Code
+---
+see dynamodb table:
+inventory
+PK - code
+---
+See also incoming event json object  
+Lambda-SNS-SQS-Lambda
+
+notification-event.json
+  "Message\" : \"{\\\"item\\\":\\\"iphone\\\",\\\"status\\\":\\\"CREATED\\\",\\\"type\\\":\\\"SHIP_REQUIRED\\\",\\\"id\\\":\\\"6294baa8-23a9-47f5-b5fd-a7c647b2e824\\\"}\"
+
+---
+npm init -y
+
+set type module
+	"main": "index.js",
+  "type": "module",
+
+npm install @aws-sdk/client-dynamodb
+npm install @aws-sdk/util-dynamodb
+
+---
+Develop Lambda:
+
+  // pseo code
+	// 1- iterate sqs records
+	// 2- get request body payload of sns
+	// 3- get request body payload of order data	
+	// 4- save order item into inventory dynamodb table with using dnamodb sdk package
+
+---
+Expected payload:
+{
+  "username":"swn",
+  "item":"iphone",
+  "status":"CREATED",
+  "type":"SHIP_REQUIRED"
+}

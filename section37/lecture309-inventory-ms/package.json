@@ -1,0 +1,17 @@
+{
+  "name": "lecture309-inventory-ms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.145.0",
+    "@aws-sdk/util-dynamodb": "^3.145.0"
+  }
+}

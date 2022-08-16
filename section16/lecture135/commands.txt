@@ -1,0 +1,31 @@
+Write Data into DynamoDB Table with AWS CLI
+---
+AWS CLI example creates a new item into Order table using put-item.
+
+Run Command:
+mac:
+aws dynamodb put-item \
+    --table-name Order  \
+    --item \
+        '{"id": {"S": "1"}, "status": {"S": "IN_PROGRESS"}, "desc": {"S": "iphone order"}, "orderDate": {"S": "2022-05-15"}}'
+
+aws dynamodb put-item \
+    --table-name Order  \
+    --item \
+        '{"id": {"S": "1"}, "status": {"S": "DELIVERY"}, "desc": {"S": "samsung order"}, "orderDate": {"S": "2022-05-19"}}'
+
+windows:
+aws dynamodb put-item `
+    --table-name Order  `
+    --item `
+        '{""id"": {""S"": ""1""}, ""status"": {""S"": ""IN_PROGRESS""}, ""desc"": {""S"": ""iphone order""}, ""orderDate"": {""S"": ""2022-05-15""}}'
+
+aws dynamodb put-item `
+    --table-name Order  `
+    --item `
+        '{""id"": {""S"": ""1""}, ""status"": {""S"": ""DELIVERY""}, ""desc"": {""S"": ""samsung order""}, ""orderDate"": {""S"": ""2022-05-19""}}'
+
+---
+Multiline char 
+	    for windows = `
+	    for mac = \

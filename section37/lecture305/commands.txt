@@ -1,0 +1,65 @@
+Create Infrastructure for Pub/Sub Fan-Out Architecture with SNS, SQS and Lambda Part 2
+---
+Add Lambda logs
+	console.log("event:", JSON.stringify(event, undefined, 2));
+---
+Create SNS and topics
+
+Create topic
+	standart
+	OrderTopic
+---
+Create subscriptions SNS -- SQS subs
+
+protocol - SQS
+	inventory-queue
+	shipment-queue
+---
+Set Principal to be the Amazon SNS service :
+
+ "Principal": {
+        "Service": "sns.amazonaws.com"
+      },
+
+Updated Access Policy:
+{
+  "Version": "2008-10-17",
+  "Id": "__default_policy_ID",
+  "Statement": [
+    {
+      "Sid": "__owner_statement",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "sns.amazonaws.com"
+      },
+      "Action": "SQS:*",
+      "Resource": "arn:aws:sqs:us-east-2:308360398142:shipment-queue"
+    }
+  ]
+}
+
+---
+Test with publish SNS message
+
+goto SNS
+publish message
+
+subject- order_placed
+message:
+
+{
+  "item":"iphone",
+   "status":"CREATED",
+   "type":"SHIP_REQUIRED"
+}
+
+---
+Cloudwatch logs
+	event.json
+
+---
+explain body
+sqs -> body -> sns topic -> message = actual order message
+
+so we need to react this order message with
+	records[0].body.Message - get json object

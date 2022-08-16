@@ -1,0 +1,14 @@
+Test - RESTful Microservices with AWS Lambda, Api Gateway and DynamoDb
+---
+
+
+TEST Invoke Url:
+https://xxx.execute-api.ap-southeast-1.amazonaws.com/prod/product
+
+POST
+{
+	"id": "1",    
+    "title": "IPhone",
+    "description": "This is an IPhone",
+    "price": 900
+}

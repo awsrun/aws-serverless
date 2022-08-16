@@ -1,0 +1,33 @@
+Create Infrastructure for Event-Driven Microservice Architecture with EventBridge, SQS and Lambda
+---
+We will create
+	api gateway
+	basket ms lambda function
+	eventbridge custom event bus
+	sqs - order queue
+	order ms lambda function	
+	notification ms lambda function
+
+---
+Required Permission for Basket ms:
+
+EventBridge
+	events:PutEvents
+
+Commands :
+	PutEventsCommand
+
+IAM Policy:
+	AmazonEventBridgeFullAccess
+
+---
+Required Permissions for Basket and Order:
+
+Basket microservices
+	EventBridge:PutEvents
+
+Order microservices
+	SQS:Poll
+	DynamoDB:Put
+
+---
