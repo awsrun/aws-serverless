@@ -2,7 +2,7 @@
 
 **UDEMY COURSE WITH DISCOUNTED - Step by Step Development of this Repository -> https://www.udemy.com/course/aws-lambda-serverless-developer-guide-with-hands-on-labs/?couponCode=AUGUST22**
 
-![course2](https://user-images.githubusercontent.com/1147445/158019166-96732203-6642-4242-b1d9-d53ece2e1ed3.png)
+![Screenshot_9](https://user-images.githubusercontent.com/1147445/185224326-5c554a5b-9aee-4954-9f7e-d5f177b4a3ce.png)
 
 This is an AWS Serverless Bootcamp for AWS Lambda and interactions with other AWS Serverless services. You will develop thousands line of aws lambda functions interact to aws serverless services with real-world hands-on labs.
 
