@@ -7,8 +7,10 @@
 This is an AWS Serverless Bootcamp for AWS Lambda and interactions with other AWS Serverless services. You will develop thousands line of aws lambda functions interact to aws serverless services with real-world hands-on labs.
 
 ### Check Explanation of this Repository on Medium
-* [AWS Event-driven Serverless Microservices using AWS Lambda, API Gateway, EventBridge, SQS, DynamoDB and CDK for IaC](https://mehmetozkaya.medium.com/aws-event-driven-serverless-microservices-using-aws-lambda-api-gateway-eventbridge-sqs-dynamodb-a7f46220b738)
-* [See All Articles - AWS Serverless Microservices with Patterns & Best Practices](https://medium.com/aws-serverless-microservices-with-patterns-best)
+* [AWS Lambda Function Development with other AWS Serverless Services in Real-World Hands-on Labs](https://medium.com/aws-lambda-serverless-developer-guide-with-hands/aws-lambda-function-development-with-other-aws-serverless-services-in-real-world-hands-on-labs-869a1576a701)
+* [See All Articles - AWS Lambda & Serverless — Developer Guide with Hands-on Labs](https://medium.com/aws-lambda-serverless-developer-guide-with-hands)
+
+
 
 ## Whats Including In This Repository
 We will develop almost **20 real-world hands-on labs** during the course. If we look at the some of the important hands-on labs of our course;
