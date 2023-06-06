@@ -1,6 +1,6 @@
 # AWS Lambda & Serverless - Developer Guide with Hands-on Labs
 
-**UDEMY COURSE WITH DISCOUNTED - Step by Step Development of this Repository -> https://www.udemy.com/course/aws-lambda-serverless-developer-guide-with-hands-on-labs/?couponCode=MAYY23**
+**UDEMY COURSE WITH DISCOUNTED - Step by Step Development of this Repository -> https://www.udemy.com/course/aws-lambda-serverless-developer-guide-with-hands-on-labs/?couponCode=JUNE23**
 
 ![Screenshot_9](https://user-images.githubusercontent.com/1147445/185224326-5c554a5b-9aee-4954-9f7e-d5f177b4a3ce.png)
 
